@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import icarros_master_brand from '$lib/images/icarros-Master-Brand.png';
 	import app_store from '$lib/icons/app-store.png';
 	import play_store from '$lib/icons/play-store.png';
@@ -352,5 +352,40 @@
 	</section>
 </footer>
 
-<style>
+<style lang="scss">
+	@mixin shadowEffect() {
+		transition: all 0.2s ease-in;
+		filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.541));
+	}
+
+	footer {
+		@media screen and (max-width: 992px) {
+			border-top: 1px solid #d6d0cc;
+		}
+
+		#store_social {
+			ul {
+				@media screen and (max-width: 992px) {
+					border-bottom: 1px solid #d6d0cc;
+				}
+			}
+
+			.social img:hover {
+				@include shadowEffect();
+			}
+		}
+
+		#items {
+			.orange {
+				color: var(--laranja-claro);
+			}
+
+			ul {
+				a:hover {
+					color: var(--laranja-claro) !important;
+					transition: all ease-in 0.2s;
+				}
+			}
+		}
+	}
 </style>

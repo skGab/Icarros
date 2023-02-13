@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import logo_mobile from '$lib/images/logo_mobile.webp';
 	import logo_manual_icarros from '$lib/images/logo_manual_icarros.webp';
 	import menu_hamburguer from '$lib/icons/menu-hamburguer.png';
@@ -70,5 +70,21 @@
 	</nav>
 </header>
 
-<style>
+<style lang="scss">
+	
+
+	header {
+		// HEADER
+		.navbar-toggler:focus {
+			box-shadow: none;
+		}
+
+		// nav:first-child {
+		//   background-color: var(--roxo);
+		// }
+
+		a:hover {
+			color: var(--laranja-claro) !important;
+		}
+	}
 </style>

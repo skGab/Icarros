@@ -1,3 +1,4 @@
+<!-- SCRIPTS -->
 <script lang="ts">
 	// ICONS AND IMAGES
 	import banner_hero from '$lib/images/banner_hero.webp';
@@ -18,15 +19,19 @@
 	import service_icon from '$lib/icons/service-icon.png';
 	import finance_icon from '$lib/icons/finance-icon.png';
 
+	import card_bg from '$lib/images/card-bg.webp';
+
 	// SPLIDE SLIDE
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 </script>
 
+<!-- HEAD -->
 <svelte:head>
 	<title>manual icarros</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="O manual da Icarros" />
 </svelte:head>
 
+<!-- HERO -->
 <section id="hero">
 	<div class="container-lg px-0 px-lg-4">
 		<div id="carouselHero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
@@ -814,5 +819,254 @@
 	</div>
 </section>
 
-<style>
+<!-- STYLE -->
+<style lang="scss">
+	@mixin animation($bg-color) {
+		background-color: $bg-color;
+		transition: all 0.5s ease;
+	}
+	@mixin brightnessEffect() {
+		transition: all 0.2s ease-in;
+		filter: brightness(150%);
+	}
+	@mixin shadowEffect() {
+		transition: all 0.2s ease-in;
+		filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.541));
+	}
+
+	// HOME PAGE
+	#hero {
+		.carousel-inner {
+			.carousel-item {
+				img {
+					min-height: 498px;
+					object-fit: cover;
+					object-position: 50%;
+
+					@media only screen and (min-width: 992px) {
+						border-radius: 12px;
+					}
+				}
+
+				.carousel-caption {
+					top: 5%;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					text-align: left;
+					padding: 0 1.5rem;
+
+					.btn-content {
+						border: #ffffffe8 1px solid !important;
+						border-radius: 0.5rem;
+					}
+
+					.btn-content:hover {
+						border: var(--laranja-claro) 1px solid !important;
+					}
+
+					.btn-content:hover > a {
+						color: var(--laranja-claro);
+					}
+
+					@media only screen and (min-width: 992px) {
+						top: 0%;
+						padding: 5rem;
+					}
+				}
+			}
+
+			@media only screen and (min-width: 992px) {
+				border-radius: 12px;
+			}
+		}
+	}
+
+	#search_content {
+		form {
+			.input-group {
+				border: 1px solid var(--cinza-escuro-borda);
+				border-radius: 8px;
+				background-color: #f2f2f2;
+			}
+
+			input {
+				color: var(--preto);
+				background: none;
+			}
+
+			input:focus {
+				box-shadow: none;
+				outline: none;
+			}
+		}
+
+		button {
+			background-color: var(--laranja-claro);
+			border-radius: 8px;
+			transition: all 0.2s ease-in;
+
+			a:hover {
+				color: var(--branco) !important;
+			}
+
+			a:focus {
+				color: var(--branco);
+			}
+		}
+
+		button:focus,
+		button:hover {
+			box-shadow: none;
+			@include animation(rgb(26, 26, 26));
+		}
+	}
+
+	#editorials,
+	#recent_content,
+	#gallery,
+	#services {
+		.card {
+			border: #00000025 solid 1px;
+			border-radius: 12px;
+		}
+
+		.splide {
+			.splide__pagination {
+				position: unset;
+				margin-top: 1.5rem;
+			}
+			.splide__pagination__page {
+				border: var(--cinza-escuro-borda) solid 1px;
+				background: none;
+			}
+			.splide__pagination__page.is-active {
+				background-color: rgb(0, 0, 0);
+			}
+
+			.splide__arrow {
+				background: none;
+				top: 97%;
+			}
+			.splide__arrow--next {
+				right: 1rem;
+				max-width: 1rem;
+			}
+			.splide__arrow--prev {
+				left: 1em;
+				max-width: 1rem;
+			}
+		}
+	}
+
+	#editorials {
+		.splide {
+			.splide__slide {
+				max-width: 368px;
+			}
+		}
+
+		a:hover {
+			h3 {
+				transition: all 0.2s ease-in;
+				color: var(--laranja-claro) !important;
+			}
+		}
+	}
+
+	#recent_content {
+		.card {
+			background: url('/src/lib/images/card-bg.webp') center no-repeat;
+			background-size: cover;
+			min-height: 320px;
+			border: none;
+		}
+
+		.card:hover {
+			@include brightnessEffect();
+		}
+
+		.splide {
+			.splide__slide {
+				max-width: 320px;
+			}
+			.splide__arrow {
+				background: none;
+				top: 98%;
+			}
+		}
+	}
+
+	#cta {
+		.card {
+			background-color: var(--laranja-claro);
+			border-radius: 20px;
+
+			p {
+				width: fit-content;
+				border-radius: 15px;
+			}
+
+			a {
+				color: var(--branco);
+				background-color: var(--cinza-escuro-borda);
+				border-radius: 8px;
+			}
+
+			a:hover {
+				@include animation(#ffffff);
+				color: var(--cinza-escuro-borda);
+			}
+
+			strong {
+				border-radius: 0 0 15px 15px;
+				color: var(--laranja-claro);
+			}
+
+			.logo > img {
+				@media only screen and (min-width: 992px) {
+					max-width: 132px;
+				}
+			}
+
+			.car > img {
+				@media only screen and (min-width: 992px) {
+					max-width: 200px;
+				}
+			}
+		}
+	}
+
+	#gallery {
+		.card {
+			background: url('/src/lib/images/gallery-img.webp') center no-repeat;
+			background-size: cover;
+			min-height: 385px;
+			cursor: pointer;
+			border-radius: 20px;
+		}
+
+		.splide {
+			.splide__slide {
+				max-width: 368px;
+			}
+		}
+
+		.card:hover {
+			@include brightnessEffect();
+		}
+	}
+
+	#services {
+		a:hover h3 {
+			transition: all 0.2s ease-in;
+			color: var(--laranja-claro) !important;
+		}
+
+		.splide {
+			.splide__slide {
+				max-width: 368px;
+			}
+		}
+	}
 </style>
