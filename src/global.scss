@@ -8,20 +8,6 @@
 	--branco: #ffffff;
 	--cinza: #56504c;
 	--cinza-escuro-borda: #3d3a34;
-
-	// --font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-	// 	Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	// --font-mono: 'Fira Mono', monospace;
-	// --color-bg-0: rgb(202, 216, 228);
-	// --color-bg-1: hsl(209, 36%, 86%);
-	// --color-bg-2: hsl(224, 44%, 95%);
-	// --color-theme-1: #ff3e00;
-	// --color-theme-2: #4075a6;
-	// --color-text: rgba(0, 0, 0, 0.7);
-	// --column-width: 42rem;
-	// --column-margin-top: 4rem;
-	// font-family: var(--font-body);
-	// color: var(--color-text);
 }
 
 @mixin animation($bg-color) {
@@ -115,6 +101,13 @@ body {
 	section {
 		margin-bottom: 4.5rem;
 	}
+
+	@media screen and (min-width: 1200px) {
+		.container,
+		.container-lg {
+			max-width: 1200px;
+		}
+	}
 }
 
 header {
@@ -123,9 +116,9 @@ header {
 		box-shadow: none;
 	}
 
-	nav:first-child {
-		background-color: var(--roxo);
-	}
+	// nav:first-child {
+	//   background-color: var(--roxo);
+	// }
 
 	a:hover {
 		color: var(--laranja-claro) !important;
@@ -135,41 +128,48 @@ header {
 main {
 	// HOME PAGE
 	#hero {
-		.carousel-item {
-			img {
-				min-height: 498px;
-				object-fit: cover;
-				object-position: 50%;
+		.carousel-inner {
+			.carousel-item {
+				img {
+					min-height: 498px;
+					object-fit: cover;
+					object-position: 50%;
 
-				@media only screen and (min-width: 992px) {
-					border-radius: 12px;
+					@media only screen and (min-width: 992px) {
+						border-radius: 12px;
+					}
+				}
+
+				.carousel-caption {
+					top: 5%;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					text-align: left;
+					padding: 0 1.5rem;
+
+					.btn-content {
+						border: #ffffffe8 1px solid !important;
+						border-radius: 0.5rem;
+					}
+
+					.btn-content:hover {
+						border: var(--laranja-claro) 1px solid !important;
+					}
+
+					.btn-content:hover > a {
+						color: var(--laranja-claro);
+					}
+
+					@media only screen and (min-width: 992px) {
+						top: 0%;
+						padding: 5rem;
+					}
 				}
 			}
 
-			.carousel-caption {
-				top: 5%;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				text-align: left;
-
-				.btn-content {
-					border: #ffffffe8 2px solid !important;
-					border-radius: 0.5rem;
-				}
-
-				.btn-content:hover {
-					border: var(--laranja-claro) 2px solid !important;
-				}
-
-				.btn-content:hover > a {
-					color: var(--laranja-claro);
-				}
-
-				@media only screen and (min-width: 992px) {
-					top: 0%;
-					padding: 5rem;
-				}
+			@media only screen and (min-width: 992px) {
+				border-radius: 12px;
 			}
 		}
 
@@ -299,15 +299,17 @@ main {
 			}
 		}
 
-		a:hover > h3 {
-			transition: all 0.2s ease-in;
-			color: var(--laranja-claro) !important;
+		a:hover {
+			h3 {
+				transition: all 0.2s ease-in;
+				color: var(--laranja-claro) !important;
+			}
 		}
 	}
 
 	#recent_content {
 		.card {
-			background: url(./lib/images/card-bg.webp) center no-repeat;
+			background: url(../../../assets/images/card-bg.webp) center no-repeat;
 			background-size: cover;
 			min-height: 320px;
 			border: none;
@@ -370,9 +372,17 @@ main {
 
 	#gallery {
 		.card {
-			background: url(./lib/images/gallery-img.webp) center no-repeat;
+			background: url(../../../assets/images/gallery-img.webp) center no-repeat;
 			background-size: cover;
-			min-height: 320px;
+			min-height: 385px;
+			cursor: pointer;
+			border-radius: 20px;
+		}
+
+		.splide {
+			.splide__slide {
+				max-width: 368px;
+			}
 		}
 
 		.card:hover {
@@ -384,6 +394,12 @@ main {
 		a:hover h3 {
 			transition: all 0.2s ease-in;
 			color: var(--laranja-claro) !important;
+		}
+
+		.splide {
+			.splide__slide {
+				max-width: 368px;
+			}
 		}
 	}
 
@@ -398,7 +414,7 @@ main {
 	// SINGLE PAGE
 	#banner_hero {
 		min-height: 498px;
-		background: url(./lib/images/banner_hero.webp) center no-repeat;
+		background: url(../../../assets/images/banner_hero.webp) center no-repeat;
 		background-size: cover;
 
 		@media screen and (min-width: 992px) {
@@ -440,6 +456,19 @@ footer {
 
 		.social img:hover {
 			@include shadowEffect();
+		}
+	}
+
+	#items {
+		.orange {
+			color: var(--laranja-claro);
+		}
+
+		ul {
+			a:hover {
+				color: var(--laranja-claro) !important;
+				transition: all ease-in 0.2s;
+			}
 		}
 	}
 }
