@@ -19,10 +19,13 @@
 	import service_icon from '$lib/icons/service-icon.png';
 	import finance_icon from '$lib/icons/finance-icon.png';
 
-	import card_bg from '$lib/images/card-bg.webp';
-
 	// SPLIDE SLIDE
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import ContentSlide from '$lib/components/slides/ContentSlide.svelte';
+	import EditorialsSlide from '$lib/components/slides/EditorialsSlide.svelte';
+	import GallerySlide from '$lib/components/slides/GallerySlide.svelte';
+	import ServicesSlide from '$lib/components/slides/ServicesSlide.svelte';
+	import Cta from '$lib/components/Cta.svelte';
 </script>
 
 <!-- HEAD -->
@@ -61,11 +64,6 @@
 					aria-label="Slide 3"
 				/>
 			</div>
-
-			<!-- <div class="carousel-indicators progress">
-                <div class="progress-bar w-25 text-secondary fw-bold" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-            </div> -->
 
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -165,124 +163,7 @@
 					busque por assuntos no manual icarros
 				</h2>
 
-				<Splide
-					id="editorials_slide"
-					options={{
-						gap: '2rem',
-						arrows: false,
-						perPage: 3,
-						breakpoints: {
-							991: {
-								perPage: 2
-							},
-							767: {
-								perPage: 1
-							}
-						}
-					}}
-				>
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img loading="lazy" src={place} class="img-fluid mb-5" alt="Icone Localização" />
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">mobilidade</h3>
-										<h4 class="card-text text-secondary h6">para todos que se movem</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img
-									loading="lazy"
-									src={bussiness_icon}
-									class="img-fluid mb-5"
-									alt="Icone Negocios"
-								/>
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">negócios</h3>
-										<h4 class="card-text text-secondary h6">ajuda para comprar e vender</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img
-									loading="lazy"
-									src={manuntance_icon}
-									class="img-fluid mb-5"
-									alt="Icone Manutenção"
-								/>
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">vc e seu carro</h3>
-										<h4 class="card-text text-secondary h6">manutenção e dicas de cuidado</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img loading="lazy" src={insuranceAuto} class="img-fluid mb-5" alt="Icone Carro" />
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">na garagem</h3>
-										<h4 class="card-text text-secondary h6">novidades do setor e avaliações</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img loading="lazy" src={web_icon} class="img-fluid mb-5" alt="Icone Globo" />
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">na estrada</h3>
-										<h4 class="card-text text-secondary h6">
-											histórias e experiências sobre rodas
-										</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<a href="/" class="card-body">
-								<img loading="lazy" src={person_icon} class="img-fluid mb-5" alt="Icone Pessoa" />
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="info">
-										<h3 class="card-title mb-1 h5 text-dark">institucional</h3>
-										<h4 class="card-text text-secondary h6">estudos de mercado, dados e releses</h4>
-									</div>
-									<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-				</Splide>
+				<EditorialsSlide />
 			</div>
 		</div>
 
@@ -403,317 +284,21 @@
 					conteúdos recentes
 				</h2>
 
-				<Splide
-					id="content_slide"
-					options={{
-						arrows: false,
-						gap: '1.5rem',
-						perPage: 3,
-						breakpoints: {
-							991: {
-								perPage: 2
-							},
-							767: {
-								perPage: 1
-							}
-						}
-					}}
-				>
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2">
-							<div class="card-body text-white d-flex flex-column justify-content-between">
-								<span class="border border-1 border-white rounded-3 px-2">lorem ipsum</span>
-								<div>
-									<h3 class="card-text h6 lh-base">
-										icarros aponta aumento de 500% na busca por híbridos nos últimos meses
-									</h3>
-									<button class="btn p-0">
-										<a href="/" class="h6"
-											>ver matéria
-											<img
-												loading="lazy"
-												src={arrow_right_white}
-												class="img-fluid"
-												alt="Icone seta direita"
-											/>
-										</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</SplideSlide>
-				</Splide>
+				<ContentSlide />
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- CTA -->
-<section id="cta">
-	<div class="container px-4">
-		<div class="row">
-			<div class="col mx-auto">
-				<div class="card w-100 py-3 py-lg-0">
-					<div
-						class="card-body text-center d-lg-flex align-items-center justify-content-around py-lg-0 px-xl-5 gap-3"
-					>
-						<figure class="logo mb-lg-0">
-							<img loading="lazy" src={cta_logo} class="img-fluid" alt="Icarros Logo" />
-						</figure>
-
-						<p
-							class="card-text fw-bold text-white border border-2 rounded-top  mx-auto p-3 d-lg-none"
-						>
-							Por aqui você faz tudo: <br />
-							compra, vende e financia
-						</p>
-
-						<div class="d-none d-lg-flex flex-column py-3">
-							<span
-								class="text-white fw-bold mb-2"
-								data-aos="fade-right"
-								data-aos-anchor-placement="bottom-bottom"
-								data-aos-duration="1000"
-							>
-								<img loading="lazy" src={cta_lupa} class="img-fluid" alt="Icone Lupa" />
-								carro econômico para
-							</span>
-							<strong
-								class="h2 bg-white py-3 px-3 px-xxl-4 fw-bold mb-1"
-								data-aos="fade-left"
-								data-aos-anchor-placement="bottom-bottom"
-								data-aos-duration="1000">VIAJAR COM OS AMIGOS</strong
-							>
-						</div>
-
-						<figure class="car mb-lg-0 align-self-end">
-							<img loading="lazy" src={cta_img} class="img-fluid" alt="Imagem CTA" />
-						</figure>
-
-						<a
-							href="/"
-							class="btn fw-bold px-4 px-lg-3 py-2"
-							style="min-width: 189px;"
-							data-aos="fade-left"
-							data-aos-anchor-placement="bottom-bottom"
-							data-aos-duration="1800"
-							>acesse o site
-							<img
-								loading="lazy"
-								src={arrow_right}
-								width="25px"
-								class="img-fluid"
-								alt="Seta para direita"
-							/>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<Cta />
 
 <!-- GALLERY -->
 <section id="gallery">
 	<div class="container px-4">
 		<div class="row">
 			<div class="col">
-				<Splide
-					id="gallery_slide"
-					options={{
-						arrows: false,
-						gap: '1.5rem',
-						perPage: 3,
-						breakpoints: {
-							991: {
-								perPage: 2
-							},
-							767: {
-								perPage: 1
-							}
-						}
-					}}
-				>
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2" />
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2" />
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2" />
-					</SplideSlide>
-				</Splide>
+				<GallerySlide />
 			</div>
 		</div>
 	</div>
@@ -733,87 +318,7 @@
 					produtos e serviços do icarros
 				</h2>
 
-				<Splide
-					id="services_slide"
-					options={{
-						arrows: false,
-						gap: '2rem',
-						perPage: 3,
-						breakpoints: {
-							991: {
-								perPage: 2
-							},
-							576: {
-								perPage: 1
-							}
-						}
-					}}
-				>
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2 justify-content-center">
-							<a href="/">
-								<div class="card-body d-flex flex-column justify-content-between align-items-start">
-									<img
-										loading="lazy"
-										src={service_icon}
-										class="img-fluid mb-4"
-										alt="Icone Serviço"
-									/>
-									<div class="d-flex align-items-center justify-content-between w-100">
-										<div class="info">
-											<h3 class="card-title mb-1 h6 text-dark">comprar</h3>
-											<h4 class="card-tex text-secondary small">acesse e confira</h4>
-										</div>
-										<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-									</div>
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2 justify-content-center">
-							<a href="/">
-								<div class="card-body d-flex flex-column justify-content-between align-items-start">
-									<img
-										loading="lazy"
-										src={finance_icon}
-										class="img-fluid mb-4"
-										alt="Icone Finanças"
-									/>
-									<div class="d-flex align-items-center justify-content-between w-100">
-										<div class="info">
-											<h3 class="card-title mb-1 h6 text-dark">vender</h3>
-											<h4 class="card-tex text-secondary small">acesse e confira</h4>
-										</div>
-										<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-									</div>
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="card w-100 h-100 p-2 justify-content-center">
-							<a href="/">
-								<div class="card-body d-flex flex-column justify-content-between align-items-start">
-									<img loading="lazy" src={sell_icon} class="img-fluid mb-4" alt="Icone Venda" />
-									<div class="d-flex align-items-center justify-content-between w-100">
-										<div class="info">
-											<h3 class="card-title mb-1 h6 text-dark">
-												conheça os tipos de financiamento com o icarros
-											</h3>
-											<h4 class="card-tex text-secondary small">
-												opções de financiamento e simulações
-											</h4>
-										</div>
-										<img src={arrow_right} class="img-fluid" alt="Seta para direita" />
-									</div>
-								</div>
-							</a>
-						</div>
-					</SplideSlide>
-				</Splide>
+				<ServicesSlide />
 			</div>
 		</div>
 	</div>
@@ -929,6 +434,8 @@
 		.card {
 			border: #00000025 solid 1px;
 			border-radius: 12px;
+
+			letter-spacing: 0.1px;
 		}
 
 		.splide {
@@ -949,12 +456,23 @@
 				top: 97%;
 			}
 			.splide__arrow--next {
-				right: 1rem;
+				right: 25%;
 				max-width: 1rem;
 			}
 			.splide__arrow--prev {
-				left: 1em;
+				left: 25%;
 				max-width: 1rem;
+			}
+
+			@media screen and (min-width: 992px) {
+				.splide__arrow--next {
+					right: 45%;
+					max-width: 1rem;
+				}
+				.splide__arrow--prev {
+					left: 45%;
+					max-width: 1rem;
+				}
 			}
 		}
 	}
@@ -965,27 +483,9 @@
 				max-width: 368px;
 			}
 		}
-
-		a:hover {
-			h3 {
-				transition: all 0.2s ease-in;
-				color: var(--laranja-claro) !important;
-			}
-		}
 	}
 
 	#recent_content {
-		.card {
-			background: url('/src/lib/images/card-bg.webp') center no-repeat;
-			background-size: cover;
-			min-height: 320px;
-			border: none;
-		}
-
-		.card:hover {
-			@include brightnessEffect();
-		}
-
 		.splide {
 			.splide__slide {
 				max-width: 320px;
@@ -997,75 +497,30 @@
 		}
 	}
 
-	#cta {
-		.card {
-			background-color: var(--laranja-claro);
-			border-radius: 20px;
-
-			p {
-				width: fit-content;
-				border-radius: 15px;
-			}
-
-			a {
-				color: var(--branco);
-				background-color: var(--cinza-escuro-borda);
-				border-radius: 8px;
-			}
-
-			a:hover {
-				@include animation(#ffffff);
-				color: var(--cinza-escuro-borda);
-			}
-
-			strong {
-				border-radius: 0 0 15px 15px;
-				color: var(--laranja-claro);
-			}
-
-			.logo > img {
-				@media only screen and (min-width: 992px) {
-					max-width: 132px;
-				}
-			}
-
-			.car > img {
-				@media only screen and (min-width: 992px) {
-					max-width: 200px;
-				}
-			}
-		}
-	}
+	
 
 	#gallery {
-		.card {
-			background: url('/src/lib/images/gallery-img.webp') center no-repeat;
-			background-size: cover;
-			min-height: 385px;
-			cursor: pointer;
-			border-radius: 20px;
-		}
-
 		.splide {
 			.splide__slide {
 				max-width: 368px;
 			}
-		}
-
-		.card:hover {
-			@include brightnessEffect();
+			.splide__arrow {
+				background: none;
+				top: 98%;
+			}
 		}
 	}
 
 	#services {
-		a:hover h3 {
-			transition: all 0.2s ease-in;
-			color: var(--laranja-claro) !important;
-		}
-
 		.splide {
 			.splide__slide {
 				max-width: 368px;
+			}
+
+			@media screen and (min-width: 992px) {
+				.splide__arrow {
+					display: none;
+				}
 			}
 		}
 	}

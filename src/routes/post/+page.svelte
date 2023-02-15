@@ -14,11 +14,12 @@
 	}
 	#banner_hero {
 		min-height: 498px;
-		background: url('/src/lib/images/banner_hero.webp') center no-repeat;
+		background: url('../../lib/images/banner_hero.webp') center no-repeat;
 		background-size: cover;
+
 		@media screen and (min-width: 992px) {
 			width: fit-content;
-			margin: 5rem auto;
+			margin: 0 auto 5rem auto;
 			border-radius: 15px;
 		}
 	}
@@ -33,6 +34,10 @@
 		li {
 			background-color: var(--laranja-claro);
 			border-radius: 10px;
+
+			@media screen and (min-width: 768px) {
+				min-width: 164px;
+			}
 		}
 
 		li:hover {

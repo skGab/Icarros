@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
+@import '../src/lib/font/font.scss';
 
 :root {
 	--roxo: #5731ff;
@@ -36,10 +36,14 @@
 	transition: all 0.2s ease-in;
 	filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.541));
 }
+@mixin font($font) {
+	font-family: $font;
+}
 
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
 
 	::-webkit-scrollbar {
 		width: 4px;
@@ -85,13 +89,28 @@ html {
 }
 
 body {
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Itau Text', sans-serif;
+	min-height: 100vh;
 	color: #3a3a3a;
 	overflow-x: hidden;
 	overflow-y: hidden;
 
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+
+	h1,
+	h2,
+	input {
+		@include font('Itau Display');
+		letter-spacing: 0.5px;
+	}
+
 	ul {
 		list-style: none;
+	}
+
+	button {
+		@include font('Itau text');
 	}
 
 	a {
@@ -119,10 +138,8 @@ body {
 	@media screen and (min-width: 1200px) {
 		.container,
 		.container-lg {
+			width: 85vw;
 			max-width: 1200px;
 		}
 	}
 }
-
-
-

@@ -1,27 +1,18 @@
 <script lang="ts">
-	import icarros_master_brand from '$lib/images/icarros-Master-Brand.png';
-	import app_store from '$lib/icons/app-store.png';
-	import play_store from '$lib/icons/play-store.png';
-	import facebook_icon from '$lib/icons/facebook-icon.png';
-	import instagram_icon from '$lib/icons/instagram-icon.png';
-	import youtube_icon from '$lib/icons/youtube-icon.png';
+	import logo from '$lib/images/logo.svg';
+	import app_store from '$lib/images/app_store.svg';
+	import google_play from '$lib/images/google_play.svg';
 </script>
 
 <footer class="pt-lg-5">
-	<section
-		id="store_social"
-		class="mt-5 mb-5"
-		data-aos="fade-up"
-		data-aos-anchor-placement="center-bottom"
-		data-aos-duration="950"
-	>
-		<div class="logo container px-4 mb-5">
+	<section id="store_social" class="mt-5 mb-5">
+		<div class="logo container px-4 mb-5 d-none d-lg-block">
 			<figure class="row mb-0">
 				<div class="col">
 					<img
 						loading="lazy"
-						decoding="async"
-						src={icarros_master_brand}
+						src={logo}
+						width="128px"
 						class="img-fluid"
 						alt="Logo Icarros"
 					/>
@@ -32,16 +23,30 @@
 		<div class="social container px-4 d-lg-flex flex-row gap-5 align-items-center">
 			<div class="row mb-5 mb-lg-0">
 				<figure class="d-flex align-items-center m-0 col-12 gap-3 flex-wrap">
-					<a href="/" target="_blank">
-						<img loading="lazy" decoding="async" src={app_store} class="img-fluid" alt="AppStore" />
-					</a>
-					<a href="/" target="_blank">
+					<a
+						href="https://itunes.apple.com/br/app/icarros/id453523774?mt=8"
+						target="_blank"
+						title="Baixe agora na App Store"
+						rel="noopener noreferrer"
+					>
 						<img
 							loading="lazy"
-							decoding="async"
-							src={play_store}
+							src={app_store}
 							class="img-fluid"
-							alt="PlayStore"
+							alt="Baixe agora na App Store"
+						/>
+					</a>
+					<a
+						href="https://app.adjust.com/phekz9h?campaign=Site&amp;adgroup=SMS&amp;creative=Rodapé"
+						target="_blank"
+						title="Disponível no Google Play"
+						rel="noopener noreferrer"
+					>
+						<img
+							loading="lazy"
+							src={google_play}
+							class="img-fluid"
+							alt="Disponível no Google Play"
 						/>
 					</a>
 				</figure>
@@ -49,33 +54,68 @@
 			<div class="row">
 				<div class="col-12">
 					<ul class="gap-4 d-flex p-0 pb-4 pb-lg-0 m-0">
-						<a href="/" target="_blank"
-							><img
-								loading="lazy"
-								decoding="async"
-								src={facebook_icon}
-								class="img-fluid"
-								alt="Icone Facebook"
-							/></a
+						<a
+							href="https://www.facebook.com/pages/ICarros/115380525178756"
+							target="_blank"
+							rel="nofollow noopener noreferrer"
+							title="Facebook"
 						>
-						<a href="/" target="_blank"
-							><img
-								loading="lazy"
-								decoding="async"
-								src={instagram_icon}
-								class="img-fluid"
-								alt="Icone Instagram"
-							/></a
+							<svg
+								width="24px"
+								height="24px"
+								viewBox="0 0 1024 1024"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<title>Ícone do Facebook</title>
+								<path
+									d="M938.667 112v784c0 23.573-19.093 42.667-42.667 42.667h-221.867v-330.453h110.933l16.64-128.747h-127.573v-82.24c0-37.333 10.347-62.72 63.787-62.72h68.16v-115.2c-11.84-1.6-52.267-5.12-99.413-5.12-98.347 0-165.653 60.053-165.653 170.24v94.933h-111.040v128.747h111.253v330.56h-413.227c-23.573 0-42.667-19.093-42.667-42.667v-768c0-23.573 19.093-42.667 42.667-42.667h784c14.72 0 26.667 11.947 26.667 26.667z"
+									fill="currentColor"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.instagram.com/icarros_oficial/"
+							target="_blank"
+							rel="nofollow noopener noreferrer"
+							title="Instagram"
 						>
-						<a href="/" target="_blank"
-							><img
-								loading="lazy"
-								decoding="async"
-								src={youtube_icon}
-								class="img-fluid"
-								alt="Icone Youtube"
-							/></a
+							<svg
+								width="24px"
+								height="24px"
+								viewBox="0 0 1024 1024"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								class="xT-aeb--20407399"
+							>
+								<title>Ícone do Instagram</title>
+								<path
+									d="M632.64 391.36c32.32 32.213 50.027 75.093 50.027 120.64s-17.707 88.427-50.027 120.64c-32.213 32.32-75.093 50.027-120.64 50.027s-88.427-17.707-120.64-50.027c-32.32-32.213-50.027-75.093-50.027-120.64s17.707-88.427 50.027-120.64c32.213-32.32 75.093-50.027 120.64-50.027s88.427 17.707 120.64 50.027zM938.667 298.667v426.667c0 117.333-96 213.333-213.333 213.333h-426.667c-117.333 0-213.333-96-213.333-213.333v-426.667c0-117.333 96-213.333 213.333-213.333h426.667c117.333 0 213.333 96 213.333 213.333zM725.333 512c0-117.867-95.467-213.333-213.333-213.333s-213.333 95.467-213.333 213.333 95.467 213.333 213.333 213.333 213.333-95.467 213.333-213.333zM768 256c0-23.573-19.093-42.667-42.667-42.667s-42.667 19.093-42.667 42.667 19.093 42.667 42.667 42.667 42.667-19.093 42.667-42.667z"
+									fill="currentColor"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.youtube.com/user/iCarrosVideos"
+							target="_blank"
+							rel="nofollow noopener noreferrer"
+							title="Youtube"
 						>
+							<svg
+								width="24px"
+								height="24px"
+								viewBox="0 0 1024 1024"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								class="xT-gdb-30864155"
+							>
+								<title>Ícone de Vídeo</title>
+								<path
+									d="M512 938.667c-235.642 0-426.667-191.025-426.667-426.667s191.025-426.667 426.667-426.667c235.642 0 426.667 191.025 426.667 426.667s-191.025 426.667-426.667 426.667zM448.45 347.601c-28.442-16.887-64.45 3.61-64.45 36.687v255.424c0 33.077 36.009 53.574 64.45 36.687l215.093-127.712c27.846-16.533 27.846-56.841 0-73.374l-215.093-127.712z"
+									fill="currentColor"
+								/>
+							</svg>
+						</a>
 					</ul>
 				</div>
 			</div>
@@ -90,97 +130,308 @@
 		</div>
 	</div>
 
-	<section
-		id="items"
-		class="mb-5"
-		data-aos="fade-up"
-		data-aos-anchor-placement="center-bottom"
-		data-aos-duration="950"
-	>
+	<section id="items" class="mb-5">
 		<div class="container px-4">
 			<div class="row d-lg-none">
 				<div class="col">
 					<ul class="accordion accordion-flush p-0 m-0" id="accordionFlushExample">
-						<li class="accordion-item border-bottom">
-							<h2 class="accordion-header border-bottom" id="flush-headingOne">
+						<!-- COMPRAR -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="comprar">
 								<button
 									class="accordion-button collapsed px-0"
 									type="button"
 									data-bs-toggle="collapse"
-									data-bs-target="/flush-collapseOne"
+									data-bs-target="#flush-collapseOne"
 									aria-expanded="false"
 									aria-controls="flush-collapseOne"
 								>
-									Item 01
+									comprar
 								</button>
 							</h2>
 							<div
 								id="flush-collapseOne"
 								class="accordion-collapse collapse"
-								aria-labelledby="flush-headingOne"
-								data-bs-parent="/accordionFlushExample"
+								aria-labelledby="comprar"
+								data-bs-parent="#accordionFlushExample"
 							>
 								<div class="accordion-body">
-									Placeholder content for this accordion, which is intended to demonstrate the <code
-										>.accordion-flush</code
-									> class. This is the first item's accordion body.
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/comprar/usados?reg=city" title="" class="text-dark">
+												carros novos e seminovos
+											</a>
+										</li>
+										<li>
+											<a href="/entrega-facil/index.jsp" title="" class="text-dark">
+												Entrega Fácil
+											</a>
+										</li>
+										<li>
+											<a href="/meu-icarros/meus-anuncios" title="" class="text-dark">
+												Meus anúncios
+											</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</li>
-
-						<li class="accordion-item border-bottom">
-							<h2 class="accordion-header border-bottom" id="flush-headingTwo">
+						<!-- VENDER -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="vender">
 								<button
 									class="accordion-button collapsed px-0 "
 									type="button"
 									data-bs-toggle="collapse"
-									data-bs-target="/flush-collapseTwo"
+									data-bs-target="#flush-collapseTwo"
 									aria-expanded="false"
 									aria-controls="flush-collapseTwo"
 								>
-									Item 02
+									vender
 								</button>
 							</h2>
 							<div
 								id="flush-collapseTwo"
 								class="accordion-collapse collapse"
-								aria-labelledby="flush-headingTwo"
-								data-bs-parent="/accordionFlushExample"
+								aria-labelledby="vender"
+								data-bs-parent="#accordionFlushExample"
 							>
 								<div class="accordion-body">
-									Placeholder content for this accordion, which is intended to demonstrate the <code
-										>.accordion-flush</code
-									> class. This is the second item's accordion body. Let's imagine this being filled
-									with some actual content.
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/vender/index.jsp" title="" class="text-dark"> Anuncie seu carro </a>
+										</li>
+										<li>
+											<a href="/vender/index.jsp" title="" class="text-dark"> Planos e preços </a>
+										</li>
+										<li>
+											<a href="/meu-icarros/meus-anuncios" title="" class="text-dark">
+												Gerenciar anúncio
+											</a>
+										</li>
+										<li>
+											<a href="/tabela-fipe/index.jsp" title="" class="text-dark"> Tabela FIPE </a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</li>
-
+						<!-- CATALOGO 0KM -->
 						<li class="accordion-item">
-							<h2 class="accordion-header border-bottom" id="flush-headingThree">
+							<h2 class="accordion-header border-bottom" id="catalogo">
 								<button
 									class="accordion-button collapsed px-0"
 									type="button"
 									data-bs-toggle="collapse"
-									data-bs-target="/flush-collapseThree"
+									data-bs-target="#flush-comprar"
 									aria-expanded="false"
 									aria-controls="flush-collapseThree"
 								>
-									Item 03
+									cata álogo 0km
 								</button>
 							</h2>
 							<div
-								id="flush-collapseThree"
+								id="flush-comprar"
 								class="accordion-collapse collapse"
-								aria-labelledby="flush-headingThree"
-								data-bs-parent="/accordionFlushExample"
+								aria-labelledby="catalogo"
+								data-bs-parent="#accordionFlushExample"
 							>
 								<div class="accordion-body">
-									Placeholder content for this accordion, which is intended to demonstrate the <code
-										>.accordion-flush</code
-									> class. This is the third item's accordion body. Nothing more exciting happening here
-									in terms of content, but just filling up the space to make it look, at least at first
-									glance, a bit more representative of how this would look in a real-world application.
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/catalogo/index.jsp" title="" class="text-dark"> Catálogo 0km </a>
+										</li>
+										<li>
+											<a href="/catalogo/compare.jsp" title="" class="text-dark">
+												Compare lado a lado
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- FINANCEIRO -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="financeiro">
+								<button
+									class="accordion-button collapsed px-0"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-financeiro"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									financeiro
+								</button>
+							</h2>
+							<div
+								id="flush-financeiro"
+								class="accordion-collapse collapse"
+								aria-labelledby="financeiro"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/financiamento/index.jsp" title="" class="text-dark">
+												Simular financiamento
+											</a>
+										</li>
+										<li>
+											<a href="/seguro-auto/seguroauto.jsp" title="" class="text-dark">
+												Seguro Auto
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- NOTICIAS -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="noticias">
+								<button
+									class="accordion-button collapsed px-0"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-noticias"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									noticias
+								</button>
+							</h2>
+							<div
+								id="flush-noticias"
+								class="accordion-collapse collapse"
+								aria-labelledby="noticias"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/editorias/automobilismo/54.html" title="" class="text-dark">
+												Automobilismo
+											</a>
+										</li>
+										<li>
+											<a href="/editorias/geral/32.html" title="" class="text-dark"> Geral </a>
+										</li>
+										<li>
+											<a href="/editorias/lancamentos/27.html" title="" class="text-dark">
+												Lançamentos
+											</a>
+										</li>
+										<li>
+											<a href="/editorias/manutencao-e-servicos/50.html" title="" class="text-dark">
+												Manutenção e Serviços
+											</a>
+										</li>
+										<li>
+											<a href="/editorias/saloes/31.html" title="" class="text-dark"> Salões </a>
+										</li>
+										<li>
+											<a href="/editorias/testes-e-comparativos/28.html" title="" class="text-dark">
+												Testes e Comparativos
+											</a>
+										</li>
+										<li>
+											<a href="/editorias/top-10/58.html" title="" class="text-dark"> Top 10 </a>
+										</li>
+										<li>
+											<a href="/editorias/tudo-sobre/59.html" title="" class="text-dark">
+												Tudo Sobre
+											</a>
+										</li>
+										<li>
+											<a href="/noticias/videos.jsp" title="" class="text-dark"> Vídeos </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- REVENDAS -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="revendas">
+								<button
+									class="accordion-button collapsed px-0"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-revendas"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									revendas
+								</button>
+							</h2>
+							<div
+								id="flush-revendas"
+								class="accordion-collapse collapse"
+								aria-labelledby="revendas"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="/portalrevenda/adesao.jsp" title="" class="text-dark">
+												Anunciar meu estoque
+											</a>
+										</li>
+										<li>
+											<a href="https://portalrevenda.icarros.com.br" title="" class="text-dark">
+												Acessar minha revenda
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- INSTITUCIONAL -->
+						<li class="accordion-item">
+							<h2 class="accordion-header border-bottom" id="institucional">
+								<button
+									class="accordion-button collapsed px-0"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-institucional"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									institucional
+								</button>
+							</h2>
+							<div
+								id="flush-institucional"
+								class="accordion-collapse collapse"
+								aria-labelledby="institucional"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<ul class="p-0 d-flex flex-column gap-2">
+										<li>
+											<a href="https://icarros.zendesk.com/hc/pt-br" title="" class="text-dark">
+												Fale conosco
+											</a>
+										</li>
+										<li>
+											<a href="https://privacidade.icarros.com.br" title="" class="text-dark">
+												Termos de Uso e Política de Privacidade
+											</a>
+										</li>
+										<li>
+											<a href="/principal/expediente.jsp" title="" class="text-dark">
+												Expediente
+											</a>
+										</li>
+										<li>
+											<a
+												href="https://www.icarros.com.br/media/mediaresource?id=3124"
+												title=""
+												class="text-dark"
+											>
+												Tabela de Tarifas
+											</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</li>
@@ -189,135 +440,160 @@
 			</div>
 
 			<div class="row d-none d-lg-flex">
+				<!-- COMPRAR -->
 				<div class="col">
-					<h3 class="orange h6 fw-bold mb-4">item 01</h3>
+					<h3 class="orange h6 fw-bold mb-4">comprar</h3>
 					<ul class="p-0 m-0 small d-flex flex-column gap-4">
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/comprar/usados?reg=city" class="text-dark"> Carros novos e seminovos </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/entrega-facil/index.jsp" title="" class="text-dark"> Entrega Fácil </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/meu-icarros/meus-anuncios" title="" class="text-dark"> Meus anúncios </a>
 						</li>
 					</ul>
 				</div>
+				<!-- VENDER -->
 				<div class="col">
-					<h3 class="orange h6 fw-bold mb-4">item 02</h3>
+					<h3 class="orange h6 fw-bold mb-4">vender</h3>
 
 					<ul class="p-0 m-0 small d-flex flex-column gap-4">
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/vender/index.jsp" title="" class="text-dark"> Anuncie seu carro </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/vender/index.jsp" title="" class="text-dark"> Planos e preços </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/meu-icarros/meus-anuncios" title="" class="text-dark">
+								Gerenciar anúncio
+							</a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/tabela-fipe/index.jsp" title="" class="text-dark"> Tabela FIPE </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/catalogo/index.jsp" title="" class="text-dark"> Catálogo 0km </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/catalogo/compare.jsp" title="" class="text-dark"> Compare lado a lado </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/financiamento/index.jsp" title="" class="text-dark">
+								Simular financiamento
+							</a>
 						</li>
 					</ul>
 				</div>
+				<!-- CATALOGO 0KM -->
 				<div class="col">
-					<h3 class="orange h6 fw-bold mb-4">item 03</h3>
+					<h3 class="orange h6 fw-bold mb-4">catálogo 0km</h3>
 
 					<ul class="p-0 m-0 small d-flex flex-column gap-4">
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/catalogo/index.jsp" title="" class="text-dark"> Catálogo 0km </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/catalogo/compare.jsp" title="" class="text-dark"> Compare lado a lado </a>
 						</li>
 					</ul>
 				</div>
+				<!-- FINANCEIRO -->
 				<div class="col">
-					<h3 class="orange h6 fw-bold mb-4">item 04</h3>
+					<h3 class="orange h6 fw-bold mb-4">financeiro</h3>
 					<ul class="p-0 m-0 small d-flex flex-column gap-4">
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/financiamento/index.jsp" title="" class="text-dark">
+								Simular financiamento
+							</a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
-						</li>
-						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/seguro-auto/seguroauto.jsp" title="" class="text-dark"> Seguro Auto </a>
 						</li>
 					</ul>
 				</div>
+				<!-- NOTICIAS -->
 				<div class="col">
-					<h3 class="orange h6 fw-bold mb-4">item 05</h3>
+					<h3 class="orange h6 fw-bold mb-4">notícias</h3>
 					<ul class="p-0 m-0 small d-flex flex-column gap-4">
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/automobilismo/54.html" title="" class="text-dark">
+								Automobilismo
+							</a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/geral/32.html" title="" class="text-dark"> Geral </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/lancamentos/27.html" title="" class="text-dark"> Lançamentos </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/manutencao-e-servicos/50.html" title="" class="text-dark">
+								Manutenção e Serviços
+							</a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/saloes/31.html" title="" class="text-dark"> Salões </a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/testes-e-comparativos/28.html" title="" class="text-dark">
+								Testes e Comparativos
+							</a>
 						</li>
 						<li class="fw-bold">
-							<a href="/" class="text-dark">subitem 01.1</a>
+							<a href="/editorias/top-10/58.html" title="" class="text-dark"> Top 10 </a>
+						</li>
+						<li class="fw-bold">
+							<a href="/editorias/tudo-sobre/59.html" title="" class="text-dark"> Tudo Sobre </a>
+						</li>
+						<li class="fw-bold">
+							<a href="/noticias/videos.jsp" title="" class="text-dark"> Vídeos </a>
+						</li>
+					</ul>
+				</div>
+				<!-- REVENDAS -->
+				<div class="col">
+					<h3 class="orange h6 fw-bold mb-4">revendas</h3>
+					<ul class="p-0 m-0 small d-flex flex-column gap-4">
+						<li class="fw-bold">
+							<a href="/portalrevenda/adesao.jsp" title="" class="text-dark">
+								Anunciar meu estoque
+							</a>
+						</li>
+						<li class="fw-bold">
+							<a href="https://portalrevenda.icarros.com.br" title="" class="text-dark">
+								Acessar minha revenda
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- INSTITUCIONAL -->
+				<div class="col">
+					<h3 class="orange h6 fw-bold mb-4">institucional</h3>
+					<ul class="p-0 m-0 small d-flex flex-column gap-4">
+						<li class="fw-bold">
+							<a href="https://icarros.zendesk.com/hc/pt-br" title="" class="text-dark">
+								Fale conosco
+							</a>
+						</li>
+						<li class="fw-bold">
+							<a href="https://privacidade.icarros.com.br" title="" class="text-dark">
+								Termos de Uso e Política de Privacidade
+							</a>
+						</li>
+						<li class="fw-bold">
+							<a href="/principal/expediente.jsp" title="" class="text-dark"> Expediente </a>
+						</li>
+						<li class="fw-bold">
+							<a
+								href="https://www.icarros.com.br/media/mediaresource?id=3124"
+								title=""
+								class="text-dark"
+							>
+								Tabela de Tarifas
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -333,17 +609,12 @@
 		</div>
 	</div>
 
-	<section
-		id="adress"
-		data-aos="fade-up"
-		data-aos-anchor-placement="top-bottom"
-		data-aos-duration="950"
-	>
+	<section id="adress">
 		<div class="container px-4">
 			<div class="row">
 				<div class="col-12">
 					<p class="small mb-0">
-						iCarros Ltda: Av. Presidente Juscelino Kubitschek, 180 2º Andar - Itaim Bibi - São Paulo
+						icarros Ltda: Av. Presidente Juscelino Kubitschek, 180 2º Andar - Itaim Bibi - São Paulo
 						SP CEP 04543-000 - CNPJ: 03.991.201/0001-96
 					</p>
 				</div>
@@ -365,6 +636,13 @@
 
 		#store_social {
 			ul {
+				a {
+					color: var(--cinza);
+				}
+				a:hover {
+					color: var(--laranja-claro);
+				}
+
 				@media screen and (max-width: 992px) {
 					border-bottom: 1px solid #d6d0cc;
 				}

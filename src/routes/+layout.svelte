@@ -1,13 +1,13 @@
 <script>
-	import Header from '$lib/components/header.svelte';
-	import Footer from '$lib/components/footer.svelte';
-	import Cdn from '$lib/components/cdn.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import CDN from '$lib/components/Cdn.svelte';
 	import '../global.scss';
 </script>
 
-<Cdn />
+<CDN />
 
-<div class="app">
+<div>
 	<Header />
 
 	<main>
@@ -16,6 +16,3 @@
 
 	<Footer />
 </div>
-
-<style lang="scss">
-</style>
