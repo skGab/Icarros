@@ -11,8 +11,8 @@
 	<meta name="description" content="O manual da Icarros" />
 </svelte:head>
 
-<!-- CATEGORY -->
-<section id="category" class="mt-5">
+<!-- EDITORIA -->
+<section id="editoria" class="mt-5">
 	<div class="container px-4 px-lg-0">
 		<div class="row">
 			<div class="col">
@@ -72,7 +72,7 @@
 
 <!-- STYLE -->
 <style lang="scss">
-	#category {
+	#editoria {
 		.bg {
 			border-radius: 20px;
 			background-color: var(--roxo) !important;

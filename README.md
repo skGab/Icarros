@@ -1,6 +1,6 @@
 # Todo
 --
-[] migrate post page
-[] make more components
+[x] migrate post page
+[x] make more components
 [] deploy app
 

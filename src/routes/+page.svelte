@@ -12,15 +12,8 @@
 	import insuranceAuto from '$lib/icons/insuranceAuto.png';
 	import web_icon from '$lib/icons/web-icon.png';
 	import person_icon from '$lib/icons/person-icon.png';
-	import cta_logo from '$lib/images/cta-logo.webp';
-	import cta_lupa from '$lib/icons/lupa-cta.svg';
-	import cta_img from '$lib/images/cta-img.webp';
-	import sell_icon from '$lib/icons/sell-icon.png';
-	import service_icon from '$lib/icons/service-icon.png';
-	import finance_icon from '$lib/icons/finance-icon.png';
 
 	// SPLIDE SLIDE
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import ContentSlide from '$lib/components/slides/ContentSlide.svelte';
 	import EditorialsSlide from '$lib/components/slides/EditorialsSlide.svelte';
 	import GallerySlide from '$lib/components/slides/GallerySlide.svelte';
@@ -291,7 +284,15 @@
 </section>
 
 <!-- CTA -->
-<Cta />
+<section id="cta">
+	<div class="container px-4">
+		<div class="row">
+			<div class="col mx-auto">
+				<Cta />
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- GALLERY -->
 <section id="gallery">
@@ -496,8 +497,6 @@
 			}
 		}
 	}
-
-	
 
 	#gallery {
 		.splide {
