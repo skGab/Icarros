@@ -32,7 +32,7 @@
 ## Índice
 
 - [Tecnologias](#tecnologies)
-- [Introdução & O que o sistema deve fazer](#goal)
+- [Objetivo](#goal)
 - [Funcionalidades](#features)
 - [Requerimentos de qualidade](#quality)
 - [Instruções de Uso](#glossary)
