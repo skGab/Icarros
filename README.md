@@ -1,9 +1,9 @@
 <!-- TITLE -->
-<h1 align="center" color="black"><a href="https://webapp345578.ip-45-79-37-84.cloudezapp.io/manual-icarros/" target="_blank">Icarros</a></h1>
+<h1 align="center" color="black"><a href="https://www.icarros.com.br/manual-icarros" target="_blank">Icarros</a></h1>
 
 <!-- THUMB -->
 <p align="center">
-  <a href="https://webapp345578.ip-45-79-37-84.cloudezapp.io/manual-icarros/" rel="noopener" target="_blank">
+  <a href="https://www.icarros.com.br/manual-icarros" rel="noopener" target="_blank">
         <img src="./static/doc_thumb.png" alt="Logo do Projeto" object-fit="cover">
   </a>
 </p>
