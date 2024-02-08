@@ -3,7 +3,7 @@
 
 <!-- THUMB -->
 <p align="center">
-  <a href="https://www.icarros.com.br/manual-icarros" rel="noopener" target="_blank">
+  <a href="https://www.icarros.com.br/principal/index.jsp" rel="noopener" target="_blank">
         <img src="./static/doc_thumb.png" alt="Logo do Projeto" object-fit="cover">
   </a>
 </p>
