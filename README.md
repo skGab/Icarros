@@ -1,5 +1,5 @@
 <!-- TITLE -->
-<h1 align="center" color="black"><a href="https://www.icarros.com.br/manual-icarros" target="_blank">Icarros</a></h1>
+<h1 align="center" color="black"><a href="https://www.icarros.com.br/principal/index.jsp" target="_blank">Icarros</a></h1>
 
 <!-- THUMB -->
 <p align="center">
@@ -95,4 +95,3 @@ O sistema estará disponível em http://localhost:5000/ em uma versão otimizada
 ## Autor <a name="authors"></a>
 
 - [@Gabriel Assunção](https://github.com/zDeep10) - Ideia e Construção
-  f
